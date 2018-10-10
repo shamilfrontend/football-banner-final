@@ -4,4 +4,112 @@
 
 body {
     margin: 0;
+    background-image: url('./img/bg.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+.title {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, .1);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+}
+
+.date {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+}
+
+.date span {
+    display: block;
+    background-color: #ffffff;
+    color: #262626;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper div {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.ball {
+    animation: animate 5s linear infinite;
+}
+.ball img {
+    width: 500px;
+    height: auto;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(25px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.icon {
+    animation: logo-animation 5s linear infinite;
+}
+.icon.barsa {
+    animation-delay: -5s;
+}
+.icon img {
+    width: 250px;
+    height: auto;
+}
+@keyframes logo-animation {
+    0% {
+        transform: perspective(500px) rotateY(0deg);
+    }
+    25% {
+        transform: perspective(500px) rotateY(25deg);
+    }
+    50% {
+        transform: perspective(500px) rotateY(0deg);
+    }
+    75% {
+        transform: perspective(500px) rotateY(-25deg);
+    }
+    100% {
+        transform: perspective(500px) rotateY(0deg);
+    }
 }
